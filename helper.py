@@ -21,6 +21,9 @@ def CleanServiceName(argument):
     elif 'blow' in service_name.lower():
         service_name = 'Blow'
         category = 'blow'
+    elif 'aminexil' in service_name.lower():
+        service_name = 'Aminexil'
+        category = 'product'
     elif 'blow extention' in service_name.lower():
         service_name = 'Blow Extention'
         category = 'blow'
@@ -39,6 +42,9 @@ def CleanServiceName(argument):
     elif 'cr anti hairloss' in service_name.lower():
         service_name = 'Treatment Anti Hairloss'
         category = 'treatment'
+    elif 'hairmask repair expert' in service_name.lower():
+        service_name = 'Hairmask Repair Expert'
+        category = 'treatment'
     elif 'crimbath complite' in service_name.lower():
         service_name = 'Treatment Complete'
         category = 'treatment'
@@ -54,9 +60,27 @@ def CleanServiceName(argument):
     elif 'Fashion Color' in service_name.lower():
         service_name = 'Fashion Color'
         category = 'chemical'
+    elif 'color inoa l' in service_name.lower():
+        service_name = 'Coloring INOA Long'
+        category = 'chemical'
+    elif 'color prodact sendiri' in service_name.lower():
+        service_name = 'Coloring Produk Sendiri'
+        category = 'chemical'
     elif 'hair cut women' in service_name.lower():
         service_name = 'Haircut Women'
         category = 'haircut'
+    elif 'cut woman stylist' in service_name.lower():
+        service_name = 'Haircut Women'
+        category = 'haircut'
+    elif 'cut poni' in service_name.lower():
+        service_name = 'Haircut Bangs'
+        category = 'haircut'
+    elif 'shampo free' in service_name.lower():
+        service_name = 'Shampoo'
+        category = 'shampoo'
+    elif 'free' in service_name.lower():
+        service_name = 'Service Free'
+        category = 'product'
     elif 'hair spa' in service_name.lower():
         service_name = 'Hairspa'
         category = 'treatment'
@@ -66,21 +90,30 @@ def CleanServiceName(argument):
     elif 'moisturazing shampo 250 ml' in service_name.lower():
         service_name = 'Moisturazing Shampoo 250ml'
         category = 'product'
-    elif 'naturica energizing treatment 100ml' in service_name.lower():
-        service_name = 'Naturica Energizing Treatment 100ml'
+    elif 'opuntia oil shampo 250ml' in service_name.lower():
+        service_name = 'Opuntia Oil Shampo 250ml'
         category = 'product'
-    elif 'naturica treatment' in service_name.lower():
-        service_name = 'Naturica Treatment'
-        category = 'treatment'
-    elif 'naturica' in service_name.lower():
-        service_name = 'Naturica Treatment'
-        category = 'treatment'
     elif 'netral' in service_name.lower():
         service_name = 'Netral'
         category = 'shampoo'
     elif 'opuntia oil pemakaian' in service_name.lower():
         service_name = 'Opuntia Oil Pemakaian'
         category = 'product'
+    elif 'naturica bamboo detangled hair brush' in service_name.lower():
+        service_name = 'Naturica Bamboo Detangled Hair Brush'
+        category = 'product'
+    elif 'naturica energizing treatment 100ml' in service_name.lower():
+        service_name = 'Naturica Energizing Treatment 100ml'
+        category = 'product'
+    elif 'naturica treatment' in service_name.lower():
+        service_name = 'Naturica Treatment'
+        category = 'treatment'
+    elif 'shampo naturica' in service_name.lower():
+        service_name = 'Shampoo Naturica'
+        category = 'product'
+    elif 'naturica' in service_name.lower():
+        service_name = 'Naturica Treatment'
+        category = 'treatment'
     elif 'reflexi' in service_name.lower():
         service_name = 'Foot Reflexy'
         category = 'massage'
@@ -117,6 +150,18 @@ def CleanServiceName(argument):
     elif 'hand polis opi' in service_name.lower():
         service_name = 'Hand Polis OPI'
         category = 'polish'
+    elif 'hand gell' in service_name.lower():
+        service_name = 'Hand Gell OPI'
+        category = 'polish'
+    elif 'hand gel' in service_name.lower():
+        service_name = 'Hand Gell OPI'
+        category = 'polish'
+    elif 'remove foot' in service_name.lower():
+        service_name = 'Remove Foot Gell'
+        category = 'polish'
+    elif 'remove hand' in service_name.lower():
+        service_name = 'Remove Hand Gell'
+        category = 'polish'
     elif 'manicure' in service_name.lower():
         service_name = 'Manicure Gehwol'
         category = 'mp'
@@ -135,10 +180,16 @@ def CleanServiceName(argument):
     elif 'reflexy' in service_name.lower():
         service_name = 'Foot Reflexy'
         category = 'massage'
+    elif 'soothing relief shampo' in service_name.lower():
+        service_name = 'Soothing Relief Shampo'
+        category = 'product'
     elif 'soothing shampo 1000 ml' in service_name.lower():
         service_name = 'Shoothing Shampo 1000ml'
         category = 'product'
     elif 'foot gell opie' in service_name.lower():
+        service_name = 'Foot Gell OPI'
+        category = 'polish'
+    elif 'foot gel' in service_name.lower():
         service_name = 'Foot Gell OPI'
         category = 'polish'
     elif 'hair tonic' in service_name.lower():
@@ -147,11 +198,17 @@ def CleanServiceName(argument):
     elif 'hairspa' in service_name.lower():
         service_name = 'Hairspa'
         category = 'treatment'
+    elif 'scalp complete' in service_name.lower():
+        service_name = 'Treatment Complete'
+        category = 'treatment'
     elif 'blow' in service_name.lower():
         service_name = 'Blow'
         category = 'blow'
     elif 'coloring inoa s' in service_name.lower():
         service_name = 'Coloring Inoa Short'
+        category = 'chemical'
+    elif 'coloring inoa l' in service_name.lower():
+        service_name = 'Coloring Inoa Long'
         category = 'chemical'
     elif 'coloring l 1' in service_name.lower():
         service_name = 'Coloring Long'
@@ -162,14 +219,26 @@ def CleanServiceName(argument):
     elif 'cut women' in service_name.lower():
         service_name = 'Haircut Woman'
         category = 'haircut'
-    elif 'extra loreal 1' in service_name.lower():
-        service_name = 'Extra Loreal 1'
-        category = 'product'
     elif 'extra loreal 1/2' in service_name.lower():
         service_name = 'Extra Loreal 1/2'
         category = 'product'
+    elif 'balancing remedy shp 1000ml' in service_name.lower():
+        service_name = 'Balancing Remedy Shp 1000ml'
+        category = 'product'
+    elif 'extra inoa 1/2' in service_name.lower():
+        service_name = 'Extra Inoa 1/2'
+        category = 'product'
+    elif 'extra loreal 1' in service_name.lower():
+        service_name = 'Extra Loreal 1'
+        category = 'product'
+    elif 'extra loreal' in service_name.lower():
+        service_name = 'Extra Loreal 1'
+        category = 'product'
     elif 'fashion color' in service_name.lower():
         service_name = 'Fashion Color'
+        category = 'chemical'
+    elif 'highlight' in service_name.lower():
+        service_name = 'Highlight'
         category = 'chemical'
     elif 'hair coloring long' in service_name.lower():
         service_name = 'Coloring Long'
@@ -198,11 +267,17 @@ def CleanServiceName(argument):
     elif 'smoothing l' in service_name.lower():
         service_name = 'Smoothing Long'
         category = 'chemical'
+    elif 'dry scalp' in service_name.lower():
+        service_name = 'Treatment Dry Scalp'
+        category = 'treatment'
     elif 'dry' in service_name.lower():
         service_name = 'Dry Only'
         category = 'blow'
     elif 'foot polish opie' in service_name.lower():
         service_name = 'Foot Polish OPI'
+        category = 'polish'
+    elif 'full under arm rica wax' in service_name.lower():
+        service_name = 'Full Under Arm Rica Wax'
         category = 'polish'
     elif 'hand polish opi' in service_name.lower():
         service_name = 'Hand Polish OPI'
@@ -212,6 +287,9 @@ def CleanServiceName(argument):
         category = 'polish'
     elif 'apuntia oil shape matt puty' in service_name.lower():
         service_name = 'Opuntia Oil Shape Matt Putty'
+        category = 'product'
+    elif 'balancing remedy shp 250ml' in service_name.lower():
+        service_name = 'Balancing Remedy Shp 250ml'
         category = 'product'
     elif 'coco keratin s' in service_name.lower():
         service_name = 'Coco Keratin Short'
@@ -237,6 +315,9 @@ def CleanServiceName(argument):
     elif 'hair coloring short' in service_name.lower():
         service_name = 'Coloring Short'
         category = 'chemical'
+    elif 'color hena' in service_name.lower():
+        service_name = 'Coloring Hena'
+        category = 'chemical'
     elif 'hair cut man' in service_name.lower():
         service_name = 'Haircut Man'
         category = 'haircut'
@@ -245,6 +326,12 @@ def CleanServiceName(argument):
         category = 'haircut'
     elif 'hair extention' in service_name.lower():
         service_name = 'Hair Extention'
+        category = 'extention'
+    elif 'repair 1/2' in service_name.lower():
+        service_name = 'Repair 1/2'
+        category = 'extention'
+    elif 'pelepasan he' in service_name.lower():
+        service_name = 'Lepas Hair Extention'
         category = 'extention'
     elif 'haircut women' in service_name.lower():
         service_name = 'Haircut Women'
@@ -255,6 +342,9 @@ def CleanServiceName(argument):
     elif 'repair 1/4' in service_name.lower():
         service_name = 'Repair 1/4'
         category = 'extention'
+    elif 'repair 1 tape' in service_name.lower():
+        service_name = 'Repair 1 Tape'
+        category = 'extention'
     elif 'shape matt' in service_name.lower():
         service_name = 'Shape Matt Putty for Men'
         category = 'product'
@@ -264,8 +354,16 @@ def CleanServiceName(argument):
     elif 'smothing coco' in service_name.lower():
         service_name = 'Smoothing Coco'
         category = 'chemical'
+    elif 'perm' in service_name.lower():
+        service_name = 'Perming'
+        category = 'chemical'
+    elif 'makeup' in service_name.lower():
+        service_name = 'Makeup'
+        category = 'makeup'
+    elif 'eye apply' in service_name.lower():
+        service_name = 'Eye Apply'
+        category = 'makeup'
 
-    print(service_name)
     return {
         'service_name':  service_name,
         'category': category
@@ -371,6 +469,7 @@ def Employee():
         'nuy ': 'therapies',
         'saini': 'therapies',
         'tatang': 'stylist',
-        'sinta': 'kasir',
-        'dilla': 'kasir'
+        'sinta': 'therapies',
+        'dilla': 'therapies',
+        'fitri': 'therapies'
     }
