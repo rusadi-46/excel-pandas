@@ -1,13 +1,13 @@
 import pandas
 
-def WriteToExcel(destination, data, sheetname, index):
+def WriteToExcel(destination, data, sheetname, index, startrow=0):
     with pandas.ExcelWriter(
         destination,
         mode="a",
         engine="openpyxl",
         if_sheet_exists="replace",
     ) as writer:
-        data.to_excel(writer, sheet_name=sheetname, index=index) 
+        data.to_excel(writer, sheet_name=sheetname, startrow=startrow, index=index) 
 
 def CleanServiceName(argument):
     unused_name  = {'(new)', '(N)', '(baru)', '(baru )', '( baru )', 'New', '( baru)'}
@@ -30,7 +30,7 @@ def CleanServiceName(argument):
     elif 'coco keratin l' in service_name.lower():
         service_name = 'Coco Keratin Long'
         category = 'chemical'
-    elif 'color l ' in service_name.lower():
+    elif 'color l' in service_name.lower():
         service_name = 'Coloring Long '
         category = 'chemical'
     elif 'coloring l' in service_name.lower():
