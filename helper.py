@@ -65,11 +65,23 @@ def CleanServiceName(argument):
     elif 'hairmask repair expert' in service_name.lower():
         service_name = 'Hairmask Repair Expert'
         category = 'treatment'
+    elif 'Absolut Repair Molecular'.lower() in service_name.lower():
+        service_name = 'Absolut Repair Molecular'
+        category = 'treatment'
+    elif 'Absolute Repair Molecular'.lower() in service_name.lower():
+        service_name = 'Absolute Repair Molecular'
+        category = 'treatment'
+    elif 'Absolute Repair Molecular'.lower() in service_name.lower():
+        service_name = 'Absolute Repair Molecular'
+        category = 'treatment'
     elif 'crimbath complite' in service_name.lower():
         service_name = 'Treatment Complete'
         category = 'treatment'
     elif 'dd cream pemakian' in service_name.lower():
         service_name = 'DD Cream Pemakaian'
+        category = 'product'
+    elif 'Hair Spray'.lower() in service_name.lower():
+        service_name = 'Hair Spray'
         category = 'product'
     elif 'Hair Spray Silhoutte 500Ml'.lower() in service_name.lower():
         service_name = 'Hair Spray Silhoutte 500Ml'
@@ -114,10 +126,10 @@ def CleanServiceName(argument):
         service_name = 'Coloring Produk Sendiri'
         category = 'chemical'
     elif 'hair cut women' in service_name.lower():
-        service_name = 'Haircut Women'
+        service_name = 'Haircut Woman'
         category = 'haircut'
     elif 'cut woman stylist' in service_name.lower():
-        service_name = 'Haircut Women'
+        service_name = 'Haircut Woman'
         category = 'haircut'
     elif 'cut poni' in service_name.lower():
         service_name = 'Haircut Bangs'
@@ -125,6 +137,9 @@ def CleanServiceName(argument):
     elif 'gunting poni' in service_name.lower():
         service_name = 'Haircut Bangs'
         category = 'haircut'
+    elif 'Milk Shake Volumizing Shampoo New'.lower() in service_name.lower():
+        service_name = 'Milk Shake Volumizing Shampoo 300ml'
+        category = 'product_milk_shake'
     elif 'shampo free' in service_name.lower():
         service_name = 'Shampoo'
         category = 'shampoo'
@@ -149,6 +164,9 @@ def CleanServiceName(argument):
     elif 'cr complete (cromearth mask)' in service_name.lower():
         service_name = 'Cromearth Mask Treatment'
         category = 'treatment'
+    elif 'Hair Mask Cromeath'.lower() in service_name.lower():
+        service_name = 'Cromearth Mask Treatment'
+        category = 'treatment'
     elif 'hair tonic' in service_name.lower():
         service_name = 'Hair Tonic'
         category = 'product'
@@ -163,6 +181,9 @@ def CleanServiceName(argument):
         category = 'product'
     elif '(NATURICA) Repairing Mask 250ml'.lower() in service_name.lower():
         service_name = 'Naturica Repairing Mask 250ml'
+        category = 'product'
+    elif 'Naturica Repairing Shm 250ml 2021'.lower() in service_name.lower():
+        service_name = 'Naturica Repairing Shampoo 250ml'
         category = 'product'
     elif 'Earth Moon Shampo 250ml'.lower() in service_name.lower():
         service_name = 'Naturica Earth Moon Mask 250ml'
@@ -251,14 +272,17 @@ def CleanServiceName(argument):
     elif 'Milk Shake Leave In Conditioner 350Ml'.lower() in service_name.lower():
         service_name = 'Milk Shake Leave In Conditioner 350Ml'
         category = 'product_milk_shake'
+    elif 'Milk Shake Volumizing Shampoo New 300ml'.lower() in service_name.lower():
+        service_name = 'Milk Shake Volumizing Shampoo 300ml'
+        category = 'product_milk_shake'
+    elif 'Volumezing Condetioner 200Ml'.lower() in service_name.lower():
+        service_name = 'Volumezing Condetioner 200Ml'
+        category = 'product_milk_shake'
     elif 'Milk Shake Daily Frequent Conditioner 300Ml'.lower() in service_name.lower():
         service_name = 'Milk Shake Daily Frequent Conditioner 300Ml'
         category = 'product_milk_shake'
     elif 'Milk Shake Silver Shine Conditioner 250Ml'.lower() in service_name.lower():
         service_name = 'Milk Shake Silver Shine Conditioner 250Ml'
-        category = 'product_milk_shake'
-    elif 'Milk Shake Energizing Shampo 300ml'.lower() in service_name.lower():
-        service_name = 'Milk Shake Energizing Shampo 300ml'
         category = 'product_milk_shake'
     elif 'Milk Shake Moisture Plus Whipped Cream 200Ml'.lower() in service_name.lower():
         service_name = 'Milk Shake Moisture Plus Whipped Cream 200Ml'
@@ -329,6 +353,9 @@ def CleanServiceName(argument):
     elif 'naturica volumizing condetioner 250 ml 2' in service_name.lower():
         service_name = 'Naturica Volumizing Conditioner 250ml'
         category = 'product'
+    elif 'Volumezing Condetioner 1000Ml'.lower() in service_name.lower():
+        service_name = 'Naturica Volumizing Conditioner 1000Ml'
+        category = 'product'
     elif 'naturica volumizing condetioner 250 ml' in service_name.lower():
         service_name = 'Naturica Volumizing Conditioner 250ml'
         category = 'product'
@@ -386,6 +413,9 @@ def CleanServiceName(argument):
     elif 'naturica detoxifying shampo 250ml' in service_name.lower():
         service_name = 'Naturica Detoxifying Shampoo 250ml'
         category = 'product'
+    elif 'Milk Shake Energizing Shampo 300ml'.lower() in service_name.lower():
+        service_name = 'Milk Shake Energizing Shampo 300ml'
+        category = 'product_milk_shake'
     elif 'naturica detox' in service_name.lower():
         service_name = 'Naturica Detox Scrub'
         category = 'treatment'
@@ -410,6 +440,9 @@ def CleanServiceName(argument):
     elif 'Shampo 4 (New 2023)'.lower() in service_name.lower():
         service_name = 'Shampoo'
         category = 'shampoo'
+    elif 'Milk Shake Volumizing Shampoo New 300ml'.lower() in service_name.lower():
+        service_name = 'Milk Shake Volumizing Shampoo 300ml'
+        category = 'product_milk_shake'
     elif 'treatment anti hairlos' in service_name.lower():
         service_name = 'Treatment Anti Hairloss'
         category = 'treatment'
@@ -461,6 +494,9 @@ def CleanServiceName(argument):
     elif 'Hand Waxing'.lower() in service_name.lower():
         service_name = 'Hand Waxing'
         category = 'polish'
+    elif 'Foot Waxing Full'.lower() in service_name.lower():
+        service_name = 'Foot Waxing'
+        category = 'polish'
     elif 'waxing under arm' in service_name.lower():
         service_name = 'Waxing Under Arm'
         category = 'polish'
@@ -482,8 +518,14 @@ def CleanServiceName(argument):
     elif 'hand gel remove' in service_name.lower():
         service_name = 'Hand Gell Remove'
         category = 'polish'
+    elif 'Hand Remove'.lower() in service_name.lower():
+        service_name = 'Hand Gell Remove'
+        category = 'polish'
     elif 'remove hand gell' in service_name.lower():
         service_name = 'Hand Gell Remove'
+        category = 'polish'
+    elif 'Foot Remove'.lower() in service_name.lower():
+        service_name = 'Foot Remove'
         category = 'polish'
     elif 'hand gell' in service_name.lower():
         service_name = 'Hand Gell OPI'
@@ -526,6 +568,9 @@ def CleanServiceName(argument):
         category = 'product'
     elif 'pemakaian opuntia oil treatment' in service_name.lower():
         service_name = 'Pemakaian Opuntia Oil Treatment'
+        category = 'product'
+    elif 'opuntia oil shp 250' in service_name.lower():
+        service_name = 'Opuntia Oil Shampoo 250ml'
         category = 'product'
     elif 'volumezing shampo 250' in service_name.lower():
         service_name = 'Naturica Volumezing Shampo 250ml'
@@ -629,6 +674,9 @@ def CleanServiceName(argument):
     elif 'upstyle' in service_name.lower():
         service_name = 'Upstyle/Sanggul'
         category = 'upstyle'
+    elif 'Sanggul / Up Style'.lower() in service_name.lower():
+        service_name = 'Upstyle/Sanggul'
+        category = 'upstyle'
     elif 'styling..' in service_name.lower():
         service_name = 'Upstyle/Sanggul'
         category = 'upstyle'
@@ -644,15 +692,24 @@ def CleanServiceName(argument):
     elif 'hairmask repair expert ' in service_name.lower():
         service_name = 'Hairmask Repair Expert'
         category = 'treatment'
+    elif 'Hair Mask Repair Moisturaizing'.lower() in service_name.lower():
+        service_name = 'Hair Mask Repair Moisturaizing'
+        category = 'treatment'
     elif 'shampo blessing 1000ml' in service_name.lower():
         service_name = 'Shampo Blessing 1000ml'
         category = 'shampoo'
     elif 'Volumizing shampo 1000 ml'.lower() in service_name.lower():
         service_name = 'Naturica Volumizing Shampo 1000ml'
         category = 'product'
+    elif 'Milk Shake Volumizing Shampoo New 300ml'.lower() in service_name.lower():
+        service_name = 'Milk Shake Volumizing Shampoo 300ml'
+        category = 'product_milk_shake'
     elif 'shampo' in service_name.lower():
         service_name = 'Shampoo'
         category = 'shampoo'
+    elif 'Milk Shake Volumizing Shampoo New 300ml'.lower() in service_name.lower():
+        service_name = 'Milk Shake Volumizing Shampoo 300ml'
+        category = 'product_milk_shake'
     elif 'smoothing l' in service_name.lower():
         service_name = 'Smoothing Long'
         category = 'chemical'
@@ -744,7 +801,7 @@ def CleanServiceName(argument):
         service_name = 'Lepas Hair Extention'
         category = 'extention'
     elif 'haircut women' in service_name.lower():
-        service_name = 'Haircut Women'
+        service_name = 'Haircut Woman'
         category = 'haircut'
     elif 'higlight' in service_name.lower():
         service_name = 'Highlight'
@@ -951,11 +1008,13 @@ def Employee():
         'juna': 'stylist',
         'nuy ': 'therapies',
         'saini': 'therapies',
+        'endang ': 'therapies',
         'rohma': 'therapies',
         'cici': 'therapies',
         'tatang': 'stylist',
         'sinta': 'therapies',
         'puput ': 'therapies',
+        'nabila ': 'therapies',
         'dilla': 'therapies',
         'fitri': 'therapies',
         'adi ': 'therapies',

@@ -12,7 +12,7 @@ index_names = object_data.Employee.dropna().index
 # Initiate last row data
 last_row = object_data.Employee.index[-1]
 
-writer = pandas.ExcelWriter('/Users/detik/Project/extra/excel-pandas/Final Omzet.xlsx', engine='xlsxwriter')
+writer = pandas.ExcelWriter('/Users/rusadi/Projects/extra/excel-pandas/Final Omzet.xlsx', engine='xlsxwriter')
 
 # Loop index names to get data omzet per employee
 def Calculation(position, omzet, reduction, commission, idx_item, total, price, disc_value):
@@ -128,7 +128,7 @@ def regenerateDataOmzet(object_data, index_names, last_row):
         # Sort data ascending by column description
         omzet.sort_values(by=['Description'], ascending=True, inplace=True)
         # write to excel with each sheetname by employee name
-        destination =  "/Users/detik/Project/extra/excel-pandas/omzet.xlsx"
+        destination =  "/Users/rusadi/Projects/extra/excel-pandas/omzet.xlsx"
         WriteToExcel(destination, omzet, sheet_name, False)
         
 def generateFinalOmzet():
@@ -145,17 +145,17 @@ def generateFinalOmzet():
         grouped.loc['Grand Total'] = grouped.sum()
         grouped.insert(0,'Description', grouped.index)
         
+        print(grouped.columns.values)
+
         if 'potongan %' in grouped.columns.values:
-            grouped.drop(columns=['potongan %', 'komisi %'], inplace=True)
+            grouped.drop(columns=['potongan %', 'komisi %', 'Category'], inplace=True)
             grouped.rename(columns = {'Description':'SERVICE', 'Price':'PRICE', 'Total Qty':'QTY', 'Total Disc.':'DISC', 'Total Nett':'AFTER DISC', 'Potongan':'POTONGAN', 'Bruto':'BRUTO', 'Nett':'NETT'}, inplace = True)
         else:
-            grouped.drop(columns=['%'], inplace=True)
+            grouped.drop(columns=['%', 'Category'], inplace=True)
             grouped.rename(columns = {'Description':'SERVICE', 'Price':'PRICE', 'Total Qty':'QTY', 'Total Disc.':'DISC', 'Total Nett':'BRUTO', 'Nett':'NETT'}, inplace = True)
             
         total_omzet = grouped.values[-1][4]
         total_komisi = grouped.values[-1][-1]
-        # data_omzet.loc[item.strip(), 'Omzet'] = '{:,.0f}'.format(total_omzet)
-        # data_omzet.loc[item.strip(), 'Komisi'] = '{:,.0f}'.format(total_komisi)
         data_omzet.loc[item.strip(), 'Omzet'] = total_omzet
         data_omzet.loc[item.strip(), 'Komisi'] = total_komisi
         
@@ -195,7 +195,7 @@ def generateFinalOmzet():
         col_settings = [{ 'header': column } for column in grouped.columns]    
         worksheet.add_table(4, 0, last_index, max_col - 1, { 'autofilter': False, 'columns': col_settings, 'style': 'Table Style Light 11', 'total_row': True })
     
-    writer.save()
+    writer.close()
     
 def GenerateAbsensi():
     df_attendance = pandas.read_excel('Absensi.xlsx', sheet_name='absen', skiprows=1, usecols='B:B, AI:AI, AN:AP, AR:AS')
@@ -207,7 +207,7 @@ def GenerateAbsensi():
     css_alt_rows = 'background-color: powderblue; color: black;'
     css_indexes = 'background-color: steelblue; color: white; text-align: center'
     styled = df_attendance.style.apply(lambda col: np.where(col.index % 2, css_alt_rows, None)).applymap_index(lambda _: css_indexes, axis=0).applymap_index(lambda _: css_indexes, axis=1).set_properties(subset=['Total Hadir','Sakit','Izin','Cuti','Lembur','Telat','Prestasi Absensi','Potongan','Kasbon'], **{'text-align': 'center'})
-    destination =  "/Users/detik/Project/extra/excel-pandas/Payroll.xlsx"
+    destination =  "/Users/rusadi/Projects/extra/excel-pandas/Payroll.xlsx"
     WriteToExcel(destination, styled, sheetname="Absensi", index=False)
         
     print("Generate absensi successfuly")

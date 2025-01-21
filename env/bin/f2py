@@ -1,4 +1,4 @@
-#!/Users/detik/Project/extra/excel-pandas/env/bin/python
+#!/Users/rusadi/Projects/extra/excel-pandas/env/bin/python3.9
 # -*- coding: utf-8 -*-
 import re
 import sys
