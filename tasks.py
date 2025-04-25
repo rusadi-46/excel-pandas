@@ -26,7 +26,7 @@ def Calculation(position, omzet, reduction, commission, idx_item, total, price, 
             calCommission(omzet, commission, idx_item, price) 
         else:
             calCommission(omzet, commission, idx_item, total)
-
+            
 def calCommission(omzet, commission, idx_item, nominal):
     omzet.loc[idx_item, 'Nett'] = (nominal * commission) / 100
     omzet.loc[idx_item, '%'] = (omzet.loc[idx_item, 'Nett'] / nominal) * 100

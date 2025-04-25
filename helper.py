@@ -68,6 +68,9 @@ def CleanServiceName(argument):
     elif 'Absolut Repair Molecular'.lower() in service_name.lower():
         service_name = 'Absolut Repair Molecular'
         category = 'treatment'
+    elif 'Instan Repair Boost'.lower() in service_name.lower():
+        service_name = 'Instan Repair Boost'
+        category = 'treatment'
     elif 'Absolute Repair Molecular'.lower() in service_name.lower():
         service_name = 'Absolute Repair Molecular'
         category = 'treatment'
@@ -139,6 +142,9 @@ def CleanServiceName(argument):
         category = 'haircut'
     elif 'Milk Shake Volumizing Shampoo New'.lower() in service_name.lower():
         service_name = 'Milk Shake Volumizing Shampoo 300ml'
+        category = 'product_milk_shake'
+    elif 'Milk Shake Whipped Cream 200Ml'.lower() in service_name.lower():
+        service_name = 'Milk Shake Whipped Cream 200ml'
         category = 'product_milk_shake'
     elif 'shampo free' in service_name.lower():
         service_name = 'Shampoo'
@@ -695,6 +701,9 @@ def CleanServiceName(argument):
     elif 'Hair Mask Repair Moisturaizing'.lower() in service_name.lower():
         service_name = 'Hair Mask Repair Moisturaizing'
         category = 'treatment'
+    elif 'Hair Mask Repairing'.lower() in service_name.lower():
+        service_name = 'Hair Mask Repairing'
+        category = 'treatment'
     elif 'shampo blessing 1000ml' in service_name.lower():
         service_name = 'Shampo Blessing 1000ml'
         category = 'shampoo'
@@ -730,6 +739,9 @@ def CleanServiceName(argument):
         category = 'blow'
     elif 'foot polish opie' in service_name.lower():
         service_name = 'Foot Polish OPI'
+        category = 'polish'
+    elif 'Foot Frecnh Gel Opi'.lower() in service_name.lower():
+        service_name = 'Foot French Polish OPI'
         category = 'polish'
     elif 'full under arm rica wax' in service_name.lower():
         service_name = 'Full Under Arm Rica Wax'
