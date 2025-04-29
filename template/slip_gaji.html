@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 1cm;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header, .sub-header {
+            text-align: center;
+            font-weight: bold;
+        }
+        .header {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .sub-header {
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .logo-img {
+            width: 100px;
+        }
+        .info-table {
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .info-table td {
+            padding: 4px;
+        }
+        .section-title {
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .income-table, .deduction-table {
+            border-collapse: collapse;
+        }
+        .income-table td, .deduction-table td {
+            padding: 5px;
+            font-size: 12px;
+        }
+        .total-row td {
+            font-weight: bold;
+            border-top: 2px solid black;
+            padding-top: 5px;
+        }
+        .right {
+            text-align: right;
+        }
+        .kehadiran-table {
+            width: 100%;
+            margin-top: 0px;
+            font-size: 12px;
+            border-collapse: collapse;
+        }
+        .kehadiran-table td {
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo">
+        <img src="logo.png" class="logo-img">
+    </div>
+
+    <div class="header">T-STYLE SALON</div>
+    <div class="sub-header">{{ tanggal }}</div>
+
+    <table class="info-table">
+        <tr><td>Nama</td><td>:</td><td>{{ nama }}</td></tr>
+        <tr><td>Jabatan</td><td>:</td><td>{{ jabatan }}</td></tr>
+    </table>
+    <hr>
+    <div class="flex-container">
+        <!-- Pendapatan -->
+        <div>
+            <div class="section-title">A. PENDAPATAN</div>
+            <table class="income-table">
+                <tr><td style="width:140px;">Gaji</td><td style="width:10px;">:</td><td style="width:100px;" class="right">{{ gaji }}</td></tr>
+                <tr><td style="width:140px;">Komisi</td><td>:</td><td class="right">{{ komisi }}</td></tr>
+                <tr><td style="width:140px;">Lembur</td><td>:</td><td class="right">{{ lembur }}</td></tr>
+                <tr><td style="width:140px;">BPJS</td><td>:</td><td class="right">{{ bpjs }}</td></tr>
+                <tr><td style="width:140px;">Prestasi Absensi</td><td>:</td><td class="right">{{ prestasi_absensi }}</td></tr>
+                <tr><td style="width:140px;">Prestasi Omzet</td><td>:</td><td class="right">{{ prestasi_omzet }}</td></tr>
+                <tr class="total-row"><td style="width:140px;">Total Pendapatan</td><td>:</td><td class="right">{{ total_pendapatan }}</td></tr>
+            </table>
+        </div>
+
+        <!-- Potongan -->
+        <div>
+            <div class="section-title">B. POTONGAN</div>
+            <table class="deduction-table">
+                <tr><td style="width:140px;">Telat</td><td style="width:10px;">:</td><td style="width:100px;" class="right">{{ telat }}</td></tr>
+                <tr><td style="width:140px;">Kasbon</td><td>:</td><td class="right">{{ kasbon }}</td></tr>
+                <tr><td style="width:140px;">Sisa Kasbon</td><td>:</td><td class="right">{{ sisa_kasbon }}</td></tr>
+                <tr class="total-row"><td>Total Potongan</td><td>:</td><td class="right">{{ total_potongan }}</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <p style="margin-top: 20px; margin-bottom: 40px; font-weight: bold;">Total yang diterima: Rp <span class="right">{{ total_salary }}</span></p>
+    <hr>
+    <div class="section-title">C. KEHADIRAN</div>
+    <table class="kehadiran-table">
+        <tr><td>Hadir</td><td>:</td><td>{{ total_hadir }}</td><td></td><td>Sakit</td><td>:</td><td>{{ total_sakit }}</td></tr>
+        <tr><td>Lembur</td><td>:</td><td>{{ total_lembur }}</td><td></td><td>Izin</td><td>:</td><td>{{ total_izin }}</td></tr>
+        <tr><td>Cuti</td><td>:</td><td>{{ total_cuti }}</td><td></td><td>Telat</td><td>:</td><td>{{ total_telat }}</td></tr>
+    </table>
+</body>
+</html>
